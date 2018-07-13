@@ -1,0 +1,4 @@
+joker Fisher 1 1 5 5 5 
+joker Fisher 5 5 5 51 0 
+joker Fisher 5 5 5 51 0 
+joker Fisher 1 5 5 5 5 
