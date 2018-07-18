@@ -32,7 +32,7 @@ int main() {
 		<< st->get_average_ball() << endl;
 	
 
-	system("PAUSE");
 	delete st;
+	system("PAUSE");
 	return 0;
 }

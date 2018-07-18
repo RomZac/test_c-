@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include "Students.h"
 #include <fstream>
@@ -8,13 +10,14 @@ Students::Students(int default_score) {
 		scores[i] = default_score;
 }
 
-Students::Students(std::string name, std::string last_name){
-	Students::set_name( name);
+Students::Students(std::string name, std::string last_name) {
+	Students::set_name(name);
 	Students::set_last_name(last_name);
 };
 
 Students::~Students() {
-	Students::save();
+	Students::save();	
+	std::cout << "Exit code" << std::endl;
 };
 
 void Students::set_name(string st_name) {
@@ -57,3 +60,4 @@ void Students::save() {
 	fout << endl;
 	fout.close();
 }
+
