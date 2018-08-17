@@ -25,34 +25,34 @@ public:
 int Card::serial_num = 0;
 
 void Card::display() const {
-	
+
 	cout << " serial_number -> " << serial_num << endl;
-/*
-	if (number >= 2 && number <= 10)
-		cout << number;
-	else
-		switch (number)
+	/*
+		if (number >= 2 && number <= 10)
+			cout << number;
+		else
+			switch (number)
+			{
+			case jack:  cout << "Jack "; break;
+			case queen:  cout << "Queen "; break;
+			case king:  cout << "King "; break;
+			case ace:  cout << "Ace "; break;
+			default:
+				break;
+			}
+		switch (suit)
 		{
-		case jack:  cout << "Jack "; break;
-		case queen:  cout << "Queen "; break;
-		case king:  cout << "King "; break;
-		case ace:  cout << "Ace "; break;
+		case clubs: cout << "Clubs " << endl;
+			break;
+		case diamonds: cout << "diamonds " << endl;
+			break;
+		case hearts: cout << "hearts " << endl;
+			break;
+		case spades: cout << "spades " << endl;
+			break;
 		default:
 			break;
-		}
-	switch (suit)
-	{
-	case clubs: cout << "Clubs " << endl;
-		break;
-	case diamonds: cout << "diamonds " << endl;
-		break;
-	case hearts: cout << "hearts " << endl;
-		break;
-	case spades: cout << "spades " << endl;
-		break;
-	default:
-		break;
-	}*/
+		}*/
 }
 
 bool Card::isEqual(Card c2) {

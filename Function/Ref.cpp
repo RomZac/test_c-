@@ -19,4 +19,4 @@ void intfrac(float num, float& intp,  float& const fracp) {
 	long tmp = static_cast<long>(num);
 	intp = static_cast<float>(tmp);
 	fracp = num - tmp;
-}
+} 
