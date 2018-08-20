@@ -8,7 +8,7 @@ private:
 public :
 	String(char* s) {
 		str = new char[strlen(s) + 1];
-		strcpy(str,s);
+		//strcpy(str,s);
 	}
 	~String() {
 		cout << "Delete string\n";
