@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 //////////////////////////////////////////////////////////
 class person {
@@ -43,6 +44,7 @@ public:
 };
 //////////////////////////////////////////////////////////
 int main() {
+	const char* filename = "Person.txt";
 	person* persPtr[100];
 	int n = 0;
 	char ch;
@@ -54,13 +56,22 @@ int main() {
 		cout << " Input person? (y/n) ";
 		cin >> ch;
 	} while (ch == 'y');
+	
+	fstream file(filename, ios::binary);
 
 	for (int i = 0; i < n; i++) {
 		persPtr[i]->putName();
-		if (persPtr[i]->isOutstanding())
-			cout << "Happy man" << endl;
+		/*if (persPtr[i]->isOutstanding())
+			cout << "Happy man" << endl;*/
+		file.write(reinterpret_cast<char*>(persPtr[i]), sizeof(person));
 	}
-
+	
+	for (int i = 0; i < n; i++) {
+		file.read(reinterpret_cast<char*>(persPtr[i]), sizeof(person));
+		if (persPtr[i]->isOutstanding())
+		cout << "Happy man" << endl;
+	}
+	file.close();
 	system("PAUSE");
 	return 0;
 }
